@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="section">
-      <article class="media">
+      <article 
+      v-bind:key="`{{upVotesNumberTag}}`"
+      class="media"
+      v-bind:class="{ 'blue-border': `${ upVotes }`>= 20}"
+      >
         <figure class="media-left">
           <img
             :src="require(`@/assets/images/submissions/${upVotesImage}.png`)"
